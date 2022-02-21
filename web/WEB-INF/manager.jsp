@@ -67,6 +67,7 @@
             <th>surname</th>
             <th>email</th>
             <th>type</th>
+            <th>delete</th>
         </tr>
         <%
             for (User user : users) {
@@ -81,6 +82,7 @@
             </td>
             <td><%=user.getUserType().name()%>
             </td>
+            <td><a href="/deleteUser?id=<%=user.getId()%>"> Delete</a></td>
         </tr>
         <%
             }
@@ -96,6 +98,7 @@
             <th>deadline</th>
             <th>status</th>
             <th>user</th>
+            <th>delete</th>
         </tr>
         <%
             for (Task task : tasks) {
@@ -112,6 +115,7 @@
             </td>
             <td><%=task.getUser().getName() + " " + task.getUser().getSurname()%>
             </td>
+            <td><a href="/deleteTask?id=<%=task.getId()%>"> Delete</a></td>
         </tr>
         <%
             }

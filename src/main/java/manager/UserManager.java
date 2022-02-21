@@ -63,7 +63,7 @@ public class UserManager {
         return null;
     }
 
-    public void deleteUserById(int id){
+    public void deleteUserById(int id) {
         String sql = "DELETE  FROM user WHERE id = ? ";
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -87,23 +87,6 @@ public class UserManager {
         }
         return null;
     }
-
-//
-//
-//    public User getByEmail(String email) {
-//        String sql = "SELECT * FROM user WHERE email = ?";
-//        try {
-//            PreparedStatement statement = connection.prepareStatement(sql);
-//            statement.setString(1, email);
-//            ResultSet resultSet = statement.executeQuery();
-//            if (resultSet.next()) {
-//                return getUserFromResultSet(resultSet);
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
 
     private User getUserFromResultSet(ResultSet resultSet) {
         try {

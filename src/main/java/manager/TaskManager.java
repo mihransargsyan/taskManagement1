@@ -35,11 +35,11 @@ public class TaskManager {
         }
     }
 
-    public  void upDateTaskStatus(int taskId, String newStatus){
+    public void upDateTaskStatus(int taskId, String newStatus) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("UPDATE task set status = ? where  id = ?");
-            preparedStatement.setString(1,newStatus);
-            preparedStatement.setInt(2,taskId);
+            preparedStatement.setString(1, newStatus);
+            preparedStatement.setInt(2, taskId);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -99,6 +99,17 @@ public class TaskManager {
             e.printStackTrace();
         }
         return tasks;
+    }
+
+    public void deleteUserById(int id) {
+        String sql = "DELETE  FROM task WHERE id = ? ";
+        try {
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }
