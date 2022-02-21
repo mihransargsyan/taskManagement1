@@ -18,7 +18,6 @@ public class DeleteUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String idStr = req.getParameter("id");
         int id = Integer.parseInt(idStr);
-
         userManager.deleteUserById(id);
         resp.sendRedirect("/managerHome");
     }

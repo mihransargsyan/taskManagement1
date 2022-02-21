@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/managerHome", "/addTask", "userRegister"})
+@WebFilter(urlPatterns = {"/managerHome", "/addTask", "/userRegister"})
 public class ManagerAuthFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("init method");
+
     }
 
     @Override
@@ -30,6 +30,6 @@ public class ManagerAuthFilter implements Filter {
 
     @Override
     public void destroy() {
-        System.out.println("destroy method");
+
     }
 }

@@ -7,16 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>Home</title>
-  </head>
-  <body>
+</head>
+<body>
+<div style="width: 800px; margin: auto">
 
-  <form action="login" method="post">
-    <input type="text" name="email" placeholder="Input your email"><br>
-    <input type="password" name="password" placeholder="Input your password"><br>
-    <input type="submit" value="Login">
+    <form action="login" method="post">
+        <input type="text" name="email" placeholder="Input your email"><br>
+        <input type="password" name="password" placeholder="Input your password"><br>
+        <input type="submit" value="Login">
+    </form>
 
-  </form>
-  </body>
+</div>
+</body>
 </html>

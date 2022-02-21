@@ -14,7 +14,7 @@ public class UserAuthFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("init method");
+
     }
 
     @Override
@@ -31,6 +31,6 @@ public class UserAuthFilter implements Filter {
 
     @Override
     public void destroy() {
-        System.out.println("destroy method");
+
     }
 }
