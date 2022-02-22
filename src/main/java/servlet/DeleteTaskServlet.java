@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/deleteTask")
-public class deleteTaskServlet extends HttpServlet {
+public class DeleteTaskServlet extends HttpServlet {
     TaskManager taskManager = new TaskManager();
 
     @Override

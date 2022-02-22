@@ -1,5 +1,6 @@
 <%@ page import="model.Task" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="model.User" %><%--
   Created by IntelliJ IDEA.
   User: NZP
   Date: 17.02.2022
@@ -14,7 +15,10 @@
 <body>
 <%
     List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+    User user = (User) session.getAttribute("user");
 %>
+Welcome <%=user.getName()%> <%if (user.getPictureUrl() != null) {%>
+<img src="/image?path=<%=user.getPictureUrl()%>"width="50"/> <% } %>
 <a href="/logout">logout</a>
 <div>
     All Tasks:<br>

@@ -22,11 +22,12 @@
 
     <div style="width: 50%;float: left">
         Add User:<br>
-        <form action="/userRegister" method="post">
+        <form action="/userRegister" method="post" enctype="multipart/form-data">
             <input type="text" name="name" placeholder="name"><br>
             <input type="text" name="surname" placeholder="surname"><br>
             <input type="text" name="email" placeholder="email"><br>
             <input type="password" name="password" placeholder="password"><br>
+            <input type="file" name="image"><br>
             <select name="type">
                 <option value="USER">USER</option>
                 <option value="MANAGER">MANAGER</option>

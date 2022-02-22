@@ -14,8 +14,8 @@
 <div style="width: 800px; margin: auto">
 
     <form action="login" method="post">
-        <input type="text" name="email" placeholder="Input your email"><br>
-        <input type="password" name="password" placeholder="Input your password"><br>
+        <input type="text" name="email" placeholder="Input your email" required><br>
+        <input type="password" name="password" placeholder="Input your password" required><br>
         <input type="submit" value="Login">
     </form>
 
