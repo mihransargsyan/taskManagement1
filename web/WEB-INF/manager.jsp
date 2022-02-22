@@ -1,6 +1,7 @@
 <%@ page import="model.User" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.Task" %><%--
+<%@ page import="model.Task" %>
+<%@ page import="java.text.SimpleDateFormat" %><%--
   Created by IntelliJ IDEA.
   User: NZP
   Date: 17.02.2022
@@ -16,6 +17,7 @@
 <%
     List<User> users = (List<User>) request.getAttribute("users");
     List<Task> tasks = (List<Task>) request.getAttribute("tasks");
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 %>
 <a href="/logout">logout</a>
 <div style="width: 800px">
@@ -110,7 +112,7 @@
             </td>
             <td><%=task.getDescription()%>
             </td>
-            <td><%=task.getDeadline()%>
+            <td><%=sdf.format(task.getDeadline())%>
             </td>
             <td><%=task.getTaskStatus()%>
             </td>

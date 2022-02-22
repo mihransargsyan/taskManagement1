@@ -1,6 +1,7 @@
 <%@ page import="model.Task" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.User" %><%--
+<%@ page import="model.User" %>
+<%@ page import="java.text.SimpleDateFormat" %><%--
   Created by IntelliJ IDEA.
   User: NZP
   Date: 17.02.2022
@@ -16,6 +17,7 @@
 <%
     List<Task> tasks = (List<Task>) request.getAttribute("tasks");
     User user = (User) session.getAttribute("user");
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 %>
 Welcome <%=user.getName()%> <%if (user.getPictureUrl() != null) {%>
 <img src="/image?path=<%=user.getPictureUrl()%>"width="50"/> <% } %>
@@ -40,7 +42,7 @@ Welcome <%=user.getName()%> <%if (user.getPictureUrl() != null) {%>
             </td>
             <td><%=task.getDescription()%>
             </td>
-            <td><%=task.getDeadline()%>
+            <td><%=sdf.format(task.getDeadline())%>
             </td>
             <td><%=task.getTaskStatus()%>
             </td>
