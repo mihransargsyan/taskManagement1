@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/userHome", "/changeTaskStatus"})
+@WebFilter(urlPatterns = {"/userHome"})
 public class UserAuthFilter implements Filter {
 
     @Override

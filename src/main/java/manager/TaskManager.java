@@ -44,8 +44,8 @@ public class TaskManager {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
+
 
     public List<Task> getAllTasks() {
         List<Task> tasks = new ArrayList<>();
@@ -112,6 +112,16 @@ public class TaskManager {
         }
     }
 
+    public void upDateTaskUser(int taskUserId, int taskId) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE task set user_id = ? where  id = ?");
+            preparedStatement.setInt(1, taskUserId);
+            preparedStatement.setInt(2, taskId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

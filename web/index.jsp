@@ -11,7 +11,7 @@
     <title>Home</title>
 </head>
 <body>
-<div style="width: 800px; margin: auto">
+<div style="width: 1000px;height: 600px; padding-bottom: initial; margin: 0 auto; text-align: center">
 
     <form action="login" method="post">
         <input type="text" name="email" placeholder="Input your email" required><br>

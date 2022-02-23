@@ -106,4 +106,15 @@ public class UserManager {
         }
     }
 
+    public void changeUserType(int userId, String userType) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("UPDATE user set type = ? where  id = ?");
+            preparedStatement.setString(1, userType);
+            preparedStatement.setInt(2, userId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
